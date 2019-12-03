@@ -1,7 +1,15 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+// destructuring syntax
+var {Route, Router, IndexRoute, hashHistory} = require('react-router');
+var Main = require('Main');
+
 
 ReactDOM.render(
-  <h1>Boilerplate React App</h1>,
+  <Router history={hashHistory}>
+    <Route path='/' component={Main}>
+
+    </Route>
+  </Router>,
   document.getElementById('app')
 );

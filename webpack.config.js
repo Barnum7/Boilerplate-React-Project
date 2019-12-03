@@ -6,7 +6,10 @@ module.exports = {
     },
     resolve: {
         modules: [__dirname, 'node_modules'],
-        alias: {},
+        alias: {
+            Main: 'app/components/Main.jsx',
+            Nav: 'app/components/Nav.jsx'
+        },
         extensions: ['.js','.jsx']
     },
     module: {
