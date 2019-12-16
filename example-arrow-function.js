@@ -12,3 +12,26 @@ names.forEach((name) => {
 
 // ES6 single-line arrow functions
 names.forEach((name) => {console.log(name)});
+
+// This will be undefined says hi. Anonymous functions don't inherit scope
+var person = {
+    name: 'Brian',
+    greet: function () {
+        names.forEach(function (name) {
+            console.log(this.name + ' says hi to ' + name);
+        });
+    }
+};
+
+// This works because arrow functions inherit scope
+var personWorks = {
+    name: 'Brian',
+    greet: function () {
+        names.forEach((name) => {
+            console.log(this.name + ' says hi to ' + name);
+        });
+    }
+};
+
+person.greet()
+personWorks.greet()
