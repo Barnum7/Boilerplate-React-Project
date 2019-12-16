@@ -35,3 +35,14 @@ var personWorks = {
 
 person.greet()
 personWorks.greet()
+
+// add arrow format
+var addStatement = (a,b) => {
+    return a + b
+};
+
+// Add expression format
+var addExpression = (a,b) =>  a + b;
+
+console.log(addStatement(2,7));
+console.log(addExpression(23,19));
